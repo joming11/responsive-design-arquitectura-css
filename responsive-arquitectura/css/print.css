@@ -1,0 +1,11 @@
+/*directiva para imprimir*/
+@page {
+  size: A4;
+}
+
+body {
+  font-size: 12pt;
+  font-family: serif;
+  background-color: #000;
+  color: #fff;
+}

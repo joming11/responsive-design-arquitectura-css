@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Arquitectura Css</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<ul>
+		<li><a href="http://smacss.com/">Arquitectura Smacss - Scalabale and modular CSS</a></li>
+		<p>reglas base</p>
+		<p>Crear una archivo CSS inicial para resetear los formatos
+		de los navegadores.
+		</p>
+		<p>
+			Establecer reglas base para los layouts (regiones, divisiones de la maquetacion, areas)
+		</p>
+		<p>
+			establecer reglas para los modulos (listas, botones, cards, dropdown)
+		</p>
+		<p>
+			establecer reglas para los estados (eventos de javascript)
+		</p>
+		<p>reglas para los themes y tipografia</p>
+		<li><a href="http://oocss.org">CSS orientado a objetos</a></li>
+		<!-- <p>Nicole sullivan</p> -->
+		<li><a href="https://itcss.io">It CSS - Inverted Triangle CSS</a></li>
+		<p>Settings - Variables</p>
+		<p>Tools - helpers, funciones, mixins</p>
+		<p>Generic - reset, normalize</p>
+		<p>Base - estilos a etiquetas, sin clases sin Id's</p>
+		<p>Objects - oocss - cosas reutilizables, layouts</p>
+		<p>Components - oocss - cosas reutilizable, modulos</p>
+		<p>Trumps - utilidades muy especifica</p>
+		<li><a href="https://bradfrost.com/blog/post/atomic-web-design/">Diseño Atomico</a></li>
+		<p>se basa en ir de lo mas basico e indivisible, atomos, que en este caso son las etiquetas</p>
+		<p>a las moleculas, que son uniones de atomos, uniones de elementos basicos para formar una composicion</p>
+		<p>y posteriormente estructuras hechas de moleculas y utilizar estas estructuras para formar parte de otras mas grandes</p>
+		<p>la idea es crear estructuras, no paginas</p>
+		<li><a href="https://www.bbc.co.uk/gel">Global experience language</a></li>
+	</ul>
+	<h3>Metodologia BEM</h3>
+	<ul>
+		<li>Bloque -> OOCSS llama (componente) -> SMACSS llama (modulo) pieza independiente de ui
+			<p>pueden llevar guion intermedio como prefijo</p>
+		</li>
+		<li>Elemento -> cada elemento del bloque
+			<p>se separan del bloque con doble guion bajo</p>
+		</li>
+		<li>modificador -> una variante del bloque -> elemento destacado
+			<p>se separan de su elemento con doble guion medio</p>
+		</li>
+		<p>ej:
+			<ul class="menu menu--main">
+				<li class="menu__item"><a class="menu__link" href="">Item</a></li>
+				<li class="menu__item"><a class="menu__link" href="">Item</a>
+					<ul class="menu submenu">
+						<li class="menu__item submenu__item"><a class="menu__link" href="">Item</a></li>
+						<li class="menu__item submenu__item"><a class="menu__link" href="">Item</a></li>
+						<li class="menu__item submenu__item"><a class="menu__link" href="">Item</a></li>
+					</ul>
+				</li>
+				<li class="menu__item"><a class="menu__link" href="">Item</a></li>
+				<li class="menu__item"><a class="menu__link" href="">Item</a></li>
+			</ul>
+		</p>
+	</ul>
+	<h3>Suite CSS</h3>
+	<ul>
+		<li>Compenentes -> se usa camelCase
+			<p>si los componentes tiene estados se usa .is</p>
+			<p>.is-required, .is-disable, .is-active</p>
+		</li>
+		<li>Elemento -> cada elemento del bloque
+			<p>se separan del bloque con guion medio, si tiene dos palabras, se usa camelCase</p>
+		</li>
+		<li>modificador -> una variante del bloque -> elemento destacado
+			<p>se separan de su elemento con doble guion medio</p>
+		</li>
+		<li>
+			estilos utilitarios -> complementariss -> colores, tipografia -> comienza con u-colorHeader
+		</li>
+	</ul>
+
+	<h3>Control de Tipografia</h3>
+	<p>Consejos</p>
+	<p>definir 6 tamaños h1, h2, h3, normal, small, extra-small</p>
+	<p><a href="">Modular Scale</a></p>
+	<p><a href="">type Scale</a></p>
+	<p>para escalar la tipografia se usa un ratio</p>
+	<p>ratio: 1.618</p>
+	<p>base: 1em</p>
+	<p>h3: base * ratio</p>
+	<p>h2: h3 * ratio</p>
+	<p>h1: h2 * ratio</p>
+	<p>small: base / ratio</p>
+	<p>extra-small: small / ratio</p>
+
+	<h3>Ritmo Vertical</h3>
+	<p>trabajar con el line-height y verificar que la tipografia encaje en el encuadre definido</p>
+	<p>definir un line-height base</p>
+	<p>ej</p>
+	<div class="notebook">
+		<h1>Hola mundo</h1>
+		<p>Lorem ipsum dolor sit, amet consectetur adipisicing, elit. Quod, exercitationem laudantium totam veritatis dolores modi incidunt iste cupiditate, sequi mollitia nostrum aut rem odio alias vel, fuga sint adipisci officiis!</p>
+	</div>
+</body>
+</html>
